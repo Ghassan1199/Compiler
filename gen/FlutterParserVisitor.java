@@ -58,6 +58,12 @@ public interface FlutterParserVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitReturn(FlutterParser.ReturnContext ctx);
 	/**
+	 * Visit a parse tree produced by {@link FlutterParser#one_return}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitOne_return(FlutterParser.One_returnContext ctx);
+	/**
 	 * Visit a parse tree produced by {@link FlutterParser#argument}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
@@ -129,4 +135,124 @@ public interface FlutterParserVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitExtends_class(FlutterParser.Extends_classContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link FlutterParser#list}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitList(FlutterParser.ListContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link FlutterParser#list_decl}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitList_decl(FlutterParser.List_declContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link FlutterParser#new_list}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitNew_list(FlutterParser.New_listContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link FlutterParser#list_values}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitList_values(FlutterParser.List_valuesContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link FlutterParser#list_assignement}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitList_assignement(FlutterParser.List_assignementContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link FlutterParser#list_value_call}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitList_value_call(FlutterParser.List_value_callContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link FlutterParser#expr}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitExpr(FlutterParser.ExprContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link FlutterParser#exp}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitExp(FlutterParser.ExpContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link FlutterParser#comparison_operations}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitComparison_operations(FlutterParser.Comparison_operationsContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link FlutterParser#for_loop}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitFor_loop(FlutterParser.For_loopContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link FlutterParser#for_header}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitFor_header(FlutterParser.For_headerContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link FlutterParser#for_body}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitFor_body(FlutterParser.For_bodyContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link FlutterParser#for_var_decl}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitFor_var_decl(FlutterParser.For_var_declContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link FlutterParser#for_var_init}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitFor_var_init(FlutterParser.For_var_initContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link FlutterParser#for_var}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitFor_var(FlutterParser.For_varContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link FlutterParser#for_structure}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitFor_structure(FlutterParser.For_structureContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link FlutterParser#for_each}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitFor_each(FlutterParser.For_eachContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link FlutterParser#for_each_header}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitFor_each_header(FlutterParser.For_each_headerContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link FlutterParser#while}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitWhile(FlutterParser.WhileContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link FlutterParser#while_header}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitWhile_header(FlutterParser.While_headerContext ctx);
 }

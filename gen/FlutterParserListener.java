@@ -87,6 +87,16 @@ public interface FlutterParserListener extends ParseTreeListener {
 	 */
 	void exitReturn(FlutterParser.ReturnContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link FlutterParser#one_return}.
+	 * @param ctx the parse tree
+	 */
+	void enterOne_return(FlutterParser.One_returnContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link FlutterParser#one_return}.
+	 * @param ctx the parse tree
+	 */
+	void exitOne_return(FlutterParser.One_returnContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link FlutterParser#argument}.
 	 * @param ctx the parse tree
 	 */
@@ -206,4 +216,204 @@ public interface FlutterParserListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitExtends_class(FlutterParser.Extends_classContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link FlutterParser#list}.
+	 * @param ctx the parse tree
+	 */
+	void enterList(FlutterParser.ListContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link FlutterParser#list}.
+	 * @param ctx the parse tree
+	 */
+	void exitList(FlutterParser.ListContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link FlutterParser#list_decl}.
+	 * @param ctx the parse tree
+	 */
+	void enterList_decl(FlutterParser.List_declContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link FlutterParser#list_decl}.
+	 * @param ctx the parse tree
+	 */
+	void exitList_decl(FlutterParser.List_declContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link FlutterParser#new_list}.
+	 * @param ctx the parse tree
+	 */
+	void enterNew_list(FlutterParser.New_listContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link FlutterParser#new_list}.
+	 * @param ctx the parse tree
+	 */
+	void exitNew_list(FlutterParser.New_listContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link FlutterParser#list_values}.
+	 * @param ctx the parse tree
+	 */
+	void enterList_values(FlutterParser.List_valuesContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link FlutterParser#list_values}.
+	 * @param ctx the parse tree
+	 */
+	void exitList_values(FlutterParser.List_valuesContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link FlutterParser#list_assignement}.
+	 * @param ctx the parse tree
+	 */
+	void enterList_assignement(FlutterParser.List_assignementContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link FlutterParser#list_assignement}.
+	 * @param ctx the parse tree
+	 */
+	void exitList_assignement(FlutterParser.List_assignementContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link FlutterParser#list_value_call}.
+	 * @param ctx the parse tree
+	 */
+	void enterList_value_call(FlutterParser.List_value_callContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link FlutterParser#list_value_call}.
+	 * @param ctx the parse tree
+	 */
+	void exitList_value_call(FlutterParser.List_value_callContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link FlutterParser#expr}.
+	 * @param ctx the parse tree
+	 */
+	void enterExpr(FlutterParser.ExprContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link FlutterParser#expr}.
+	 * @param ctx the parse tree
+	 */
+	void exitExpr(FlutterParser.ExprContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link FlutterParser#exp}.
+	 * @param ctx the parse tree
+	 */
+	void enterExp(FlutterParser.ExpContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link FlutterParser#exp}.
+	 * @param ctx the parse tree
+	 */
+	void exitExp(FlutterParser.ExpContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link FlutterParser#comparison_operations}.
+	 * @param ctx the parse tree
+	 */
+	void enterComparison_operations(FlutterParser.Comparison_operationsContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link FlutterParser#comparison_operations}.
+	 * @param ctx the parse tree
+	 */
+	void exitComparison_operations(FlutterParser.Comparison_operationsContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link FlutterParser#for_loop}.
+	 * @param ctx the parse tree
+	 */
+	void enterFor_loop(FlutterParser.For_loopContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link FlutterParser#for_loop}.
+	 * @param ctx the parse tree
+	 */
+	void exitFor_loop(FlutterParser.For_loopContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link FlutterParser#for_header}.
+	 * @param ctx the parse tree
+	 */
+	void enterFor_header(FlutterParser.For_headerContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link FlutterParser#for_header}.
+	 * @param ctx the parse tree
+	 */
+	void exitFor_header(FlutterParser.For_headerContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link FlutterParser#for_body}.
+	 * @param ctx the parse tree
+	 */
+	void enterFor_body(FlutterParser.For_bodyContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link FlutterParser#for_body}.
+	 * @param ctx the parse tree
+	 */
+	void exitFor_body(FlutterParser.For_bodyContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link FlutterParser#for_var_decl}.
+	 * @param ctx the parse tree
+	 */
+	void enterFor_var_decl(FlutterParser.For_var_declContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link FlutterParser#for_var_decl}.
+	 * @param ctx the parse tree
+	 */
+	void exitFor_var_decl(FlutterParser.For_var_declContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link FlutterParser#for_var_init}.
+	 * @param ctx the parse tree
+	 */
+	void enterFor_var_init(FlutterParser.For_var_initContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link FlutterParser#for_var_init}.
+	 * @param ctx the parse tree
+	 */
+	void exitFor_var_init(FlutterParser.For_var_initContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link FlutterParser#for_var}.
+	 * @param ctx the parse tree
+	 */
+	void enterFor_var(FlutterParser.For_varContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link FlutterParser#for_var}.
+	 * @param ctx the parse tree
+	 */
+	void exitFor_var(FlutterParser.For_varContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link FlutterParser#for_structure}.
+	 * @param ctx the parse tree
+	 */
+	void enterFor_structure(FlutterParser.For_structureContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link FlutterParser#for_structure}.
+	 * @param ctx the parse tree
+	 */
+	void exitFor_structure(FlutterParser.For_structureContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link FlutterParser#for_each}.
+	 * @param ctx the parse tree
+	 */
+	void enterFor_each(FlutterParser.For_eachContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link FlutterParser#for_each}.
+	 * @param ctx the parse tree
+	 */
+	void exitFor_each(FlutterParser.For_eachContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link FlutterParser#for_each_header}.
+	 * @param ctx the parse tree
+	 */
+	void enterFor_each_header(FlutterParser.For_each_headerContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link FlutterParser#for_each_header}.
+	 * @param ctx the parse tree
+	 */
+	void exitFor_each_header(FlutterParser.For_each_headerContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link FlutterParser#while}.
+	 * @param ctx the parse tree
+	 */
+	void enterWhile(FlutterParser.WhileContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link FlutterParser#while}.
+	 * @param ctx the parse tree
+	 */
+	void exitWhile(FlutterParser.WhileContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link FlutterParser#while_header}.
+	 * @param ctx the parse tree
+	 */
+	void enterWhile_header(FlutterParser.While_headerContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link FlutterParser#while_header}.
+	 * @param ctx the parse tree
+	 */
+	void exitWhile_header(FlutterParser.While_headerContext ctx);
 }

@@ -1,16 +1,21 @@
 lexer grammar FlutterLexer;
 
-
-
-DATA_TYPE :  (INT_ | STRING_ | FLOAT_ | BOOLEAN_ | DOUBLE_) ;
+INT : [0-9]+ ;
+BOOLEAN:(TRUE_ | FALSE_);
+NUMBERS: (FLOAT | DOUBLE | INT);
+VALUES: (STRING | BOOLEAN | NULL_);
+FLOAT: [+-]?([0-9]*[.])?[0-9]+;
+DOUBLE:[+-]?([0-9]*[.])?[0-9]+;
+DATA_TYPE :  (INT_ | STRING_ | FLOAT_ | BOOLEAN_ | DOUBLE_ | VAR_) ;
 VOID: 'void';
 INT_: 'int';
 STRING_: 'string';
 FLOAT_: 'float';
 BOOLEAN_: 'boolean';
+MAP_: 'map';
 DOUBLE_: 'double';
-VALUES: (INT | STRING | FLOAT | DOUBLE | BOOLEAN | NULL_);
 C_AND_F: (FINAL_ | CONST_);
+LIST: 'List';
 A: '&';
 AA: '&&';
 AE: '&=';
@@ -23,7 +28,7 @@ CIRE: '^=';
 CO: ':';
 CP: ')';
 D: '.';
-
+LATE: 'late';
 EE: '==';
 EG: '=>';
 EQ: '=';
@@ -41,9 +46,10 @@ OP: '(';
 P: '|';
 PC: '%';
 PE: '%=';
+PLPL: '++';
+
 PL: '+';
 PLE: '+=';
-PLPL: '++';
 PO: '#';
 POE: '|=';
 PP: '||';
@@ -54,7 +60,6 @@ ST: '*';
 STE: '*=';
 ABSTRACT_:'abstract';
 AS_:'as';
-
 BREAK_:'break';
 CASE_:'case';
 CATCH_:'catch';
@@ -101,10 +106,7 @@ STRING : QUTE (SEQUENCES | INT)* QUTE;
 
 QUTE: '"';
 QM: '?';
-INT : DIGIT+ ( '.' DIGIT+ )? EXPONENT? | '.' DIGIT+ EXPONENT? ;
-FLOAT: [+-]?([0-9]*[.])?[0-9]+;
-DOUBLE:[+-]?([0-9]*[.])?[0-9]+;
-BOOLEAN:(TRUE_ | FALSE_);
+
 HEX_NUMBER : '0x' HEX_DIGIT+ | '0X' HEX_DIGIT+ ;
 SingleLineString : StringDQ | StringSQ | 'r\'' (~('\'' | '\n' | '\r'))* '\'' | 'r"' (~('"' | '\n' | '\r'))* '"' ;
 MultiLineString : '"""' StringContentTDQ*? '"""' | '\'\'\'' StringContentTSQ*? '\'\'\'' | 'r"""' (~'"' | '"' ~'"' | '""' ~'"')* '"""' | 'r\'\'\'' (~'\'' | '\'' ~'\'' | '\'\'' ~'\'')* '\'\'\'' ;

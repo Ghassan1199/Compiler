@@ -136,6 +136,12 @@ public interface FlutterParserVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitExtends_class(FlutterParser.Extends_classContext ctx);
 	/**
+	 * Visit a parse tree produced by {@link FlutterParser#class_instance}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitClass_instance(FlutterParser.Class_instanceContext ctx);
+	/**
 	 * Visit a parse tree produced by {@link FlutterParser#list}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
@@ -255,4 +261,58 @@ public interface FlutterParserVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitWhile_header(FlutterParser.While_headerContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link FlutterParser#do_while}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitDo_while(FlutterParser.Do_whileContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link FlutterParser#if}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitIf(FlutterParser.IfContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link FlutterParser#if_header}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitIf_header(FlutterParser.If_headerContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link FlutterParser#else_if}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitElse_if(FlutterParser.Else_ifContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link FlutterParser#else}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitElse(FlutterParser.ElseContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link FlutterParser#try_catch}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitTry_catch(FlutterParser.Try_catchContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link FlutterParser#try}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitTry(FlutterParser.TryContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link FlutterParser#catche}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitCatche(FlutterParser.CatcheContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link FlutterParser#finaly}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitFinaly(FlutterParser.FinalyContext ctx);
 }
